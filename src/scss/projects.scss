@@ -1,0 +1,35 @@
+.card .card-image figure img {
+  position: absolute;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+  height: 72pt !important;
+  min-width: 562px;
+  width: auto;
+  text-align: center !important;
+  font-size: 36pt;
+  color: white;
+}
+
+.card {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.card .card-image {
+  height: 72pt !important;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+}
+
+.card .card-header .card-header-title {
+  height: 72pt !important;
+  align-content: center !important;
+  text-align: center !important;
+  margin: auto !important;
+  justify-content: center;
+  color: white;
+  font-size: 24pt;
+  background-color: black;
+}

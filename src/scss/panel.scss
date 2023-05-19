@@ -1,0 +1,17 @@
+
+.personal-links {
+  a {
+    color: black !important;
+    &:hover {
+      color: gray !important;
+    }
+    font-size: 300%;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+}
+
+.main-panel {
+  margin-top: 0rem;
+  min-height: calc(100vh - 7.25rem);
+}

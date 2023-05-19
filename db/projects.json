@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Stuka",
+    "description": "A framework for solving certain classes of convex optimization problems. There are a myriad of methods for solving convex optimization problems and as a researcher in the field it is often difficult to understand precisely how these methods work and how they can be implemented. This library provides a framework for implementing algorithms that provides clarity to the algorithms and allows fast computation by leveraging libraries such as Eigen and SuiteSparse.",
+    "github": "https://github.com/amadavan/Stuka",
+    "banner": "https://github.com/amadavan/Stuka/raw/master/assets/stuka-banner.png"
+  },
+  {
+    "title": "PhasorPy",
+    "description": "Power systems simulations in academic work are frequently solved using the MATPOWER package. The package provides MATLAB and Octave M-files in order to solve power flow, continuation power flow and optimal power flow problems. The goal of the Phasor package is remove the need for MATLAB or Octave while providing access to the wide array of existing MATPOWER case files.",
+    "github": "https://github.com/amadavan/PhasorPy",
+    "banner": "https://github.com/amadavan/PhasorPy/raw/master/assets/phasor-banner.png"
+  },
+  {
+    "title": "UIUC Beamer Theme",
+    "description": "A simple beamer theme that I created for my own personal use. It matches the UIUC color scheme according the University standards, but can easily be adapted to other schemes.",
+    "github": "https://github.com/amadavan/UIUC-Beamer-Theme"
+  }
+]
