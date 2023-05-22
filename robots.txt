@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://ShivaniKamtikar.github.io/sitemap.xml
