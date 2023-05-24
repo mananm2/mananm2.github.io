@@ -127,7 +127,27 @@
   </header>
 
   <article>
-    <h5 class="post-title" style="color:#2698BA;">1. Active learning for multi-task learning with Gaussian processes</h5>
+    <h5 class="post-title" style="color:#2698BA;">1. Federated learning for privacy-preserving distributed deep learning</h5>
+
+    <p><b>Machine learning context:</b> Federated learning (FL) is a distributed machine learning paradigm where several clients collaboratively train a model under the orchestration of a central server, 
+      while keeping the training data decentralized and private. Conventionally, a global model is constructed by pooling raw data from different clients into a central database for model training. 
+      FL enables clients to obtain a globally optimized model without uploading data to a central database or sharing proprietary data with other clients, thus maintaining data privacy without compromising performance.</p>
+
+    <p>The <a href="https://arxiv.org/pdf/1602.05629.pdf" target="_blank" rel="noopener noreferrer"> Federated Averaging algorithm (FedAvg)</a> enables FL on decentralized data. It works as follows: 
+      First, the central server initializes a global model and shares it across all participating clients participating. Each client downloads this model and improves it by training on its local data 
+      for a some epochs. The parameter updates of the local models (think weights of a neural network) are uploaded to the central server where they are aggregated and incorporated into the global model. </p>
+
+      <div>
+        <img class="img-fluid z-depth-0 rounded" src="/assets/img/fl.jpg" width="600" height="500" alt="FL Photo">
+      </div>
+
+    <p><b>Manufacturing application 1:</b> U-Net for image segmentation.</p> 
+    
+    <p>This work was featured in MechSE News.</p>
+  </article>
+
+  <article>
+    <h5 class="post-title" style="color:#2698BA;">3. Active learning for multi-task learning with Gaussian processes</h5>
     <div class="profile float-right">
       <img class="img-fluid z-depth-0 rounded" src="/assets/img/gp.png"  width="400" height="400" alt="GP Photo">
     </div>
@@ -154,19 +174,19 @@
   </article>
 
   <article>
-    <h5 class="post-title" style="color:#2698BA;">2. Multi-task learning using multi-resolution data</h5>
+    <h5 class="post-title" style="color:#2698BA;">4. Multi-task learning using multi-resolution data</h5>
 
-    <p><b>Machine learning context:</b> Yolo
+    <p><b>Machine learning context:</b> TBA
 
-    <p>Yolo</p>
+    <p>tba</p>
   
     <div>
     <img class="img-fluid z-depth-0 rounded" src="/assets/img/gp3.jpg" width="1000" height="1000" alt="GP3 Photo">
     </div>
 
-    <p><b>Manufacturing application:</b> Yolo</p> 
+    <p><b>Manufacturing application:</b> TBA </p> 
     
-    <p>yolo.</p>
+    <p>tba</p>
   </article>
 
   </div>
