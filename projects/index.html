@@ -135,7 +135,7 @@
 
     <p>The <a href="https://arxiv.org/pdf/1602.05629.pdf" target="_blank" rel="noopener noreferrer"> Federated Averaging algorithm (FedAvg)</a> enables FL on decentralized data. It works as follows: 
       First, the central server initializes a global model and shares it across all participating clients participating. Each client downloads this model and improves it by training on its local data 
-      for a some epochs. The parameter updates of the local models (think weights of a neural network) are uploaded to the central server where they are aggregated and incorporated into the global model. </p>
+      for some epochs. The parameter updates of the local models (think weights of a neural network) are uploaded to the central server where they are aggregated and incorporated into the global model. </p>
 
       <div>
         <img class="img-fluid z-depth-0 rounded" src="/assets/img/fl.jpg" width="1000" height="1000" alt="FL Photo">
@@ -143,8 +143,27 @@
     
       <p> </p>
     <p><b>Manufacturing application 1: Semantic segmentation for pixel-scale defect detection from images</b></p> 
+    <p>Semantic segmentation is an ML-based computer vision technique which enables fine-scale defect detection in additive manufacturing (AM). Most existing segmentation methods utilize CNN architectures that require large quantities of training data. 
+      However, obtaining sufficient data — both in quality and quantity — is costly in AM. This limits the deployment of semantic segmentation in a data-scarce production environment. Similar data may be readily available at other AM sites but cannot be pooled 
+      for centralized learning (CL) due to its proprietary nature.</p>
     
-    <p>This work was featured in MechSE News.</p>
+    <p>We use FL to simultaneously alleviate both data scarcity and data privacy. We train a U-Net architecture under the FL framework and observe excellent defect detection performance even when individual manufacturers have only one or two images!
+      FL achieves a comparable defect detection performance with CL (which shares data across clients and does not preserve data privacy) and significantly outperforms individual learning (where each client trains on its own data only). We thus show that FL enables
+      the <i>best of both worlds.</i> </p>
+      
+    <p>Read our open-source paper <a href="https://reader.elsevier.com/reader/sd/pii/S0278612522001054?token=68B5A0A2634ED007EA82C99BF7811A6944D08D63AA4D71E2B3725B9FA4B1989DF960C335FCD90C1EB20A9A5C658B01F8&originRegion=us-east-1&originCreation=20230516210245" target="_blank" rel="noopener noreferrer">here</a>. 
+      Our code is available <a href="https://github.com/mananm2/FLAM" target="_blank" rel="noopener noreferrer">here</a>. 
+      This work was featured in <a href="https://mechse.illinois.edu/news/51141" target="_blank" rel="noopener noreferrer">MechSE News</a>.
+    </p>
+
+    <div>
+        <img class="img-fluid z-depth-0 rounded" src="/assets/img/unet.jpg" width="1000" height="1000" alt="Unet Photo">
+    </div>
+    <div>
+        <img class="img-fluid z-depth-0 rounded" src="/assets/img/flamresult.jpg" width="1000" height="1000" alt="FLAM result Photo">
+    </div>
+    
+    
   </article>
 
   <article>
