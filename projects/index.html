@@ -184,7 +184,13 @@
   <article>
     <h5 class="post-title"><a href="#" onclick="return false;">2. Addressing stasticial hetergeneity in federated learning using client clustering</a></h5>
 
-    <p><b>Machine learning context:</b> </p>
+    <p><b>Machine learning context:</b>  Many recent studies have shown that the global model learned by FL may not be suitable for all clients. While FL can handle some stastical heterogeneity in client data, it yields suboptimal results 
+      when the distributions diverge significantly. To tackle this, three main lines of research are prevalent. The first line of research focuses on improving the single global model learned by FedAvg to accommodate non-IID data. 
+      The second line of research learns individually optimized models for each client (personalized FL). The third line of research is clustered FL, which assumes that groups of clients share one data distribution. Here, a 
+      personalized model is learned for each group rather than each individual client.</p>
+
+      <p>The focus of our work is clustered FL. We develop a state-of-the-art method <b>F</b>ederated <b>L</b>earning via <b>A</b>gglomerative <b>C</b>lient <b>C</b>lustering (FLACC) using gradient updates from FedAvg to cluster
+      similar clients together. Read our paper <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10059167" target="_blank" rel="noopener noreferrer">here</a>. This work was featured on <a href="https://mechse.illinois.edu/news/54237" target="_blank" rel="noopener noreferrer">MechSE News</a>.</p>
       <div>
         <img class="img-fluid z-depth-0 rounded" src="/assets/img/flhetero.jpg" width="1000" height="1000" alt="FLACC Photo">
       </div>
