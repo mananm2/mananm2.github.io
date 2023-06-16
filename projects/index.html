@@ -234,15 +234,20 @@
   </article>
 
   <article>
-    <h5 class="post-title"><a href="#" onclick="return false;">4. Multi-task learning using multi-resolution data</a></h5>
+    <h5 class="post-title"><a href="#" onclick="return false;">4. Multi-task response surface modeling with multi-resolution data</a></h5>
 
-    <p><b>Machine learning context:</b> Coming soon
+    <p><b>Machine learning context:</b> There are several methods for multi-task learning with Gaussian processes (GPs) in literature. Most of these methods learn the GP mean and covariance functions for each task
+          from the training data. Some of these parameters represent input uncertainty in the system. Practically, the input uncertainty is inherent to a system and not learned for it.
+          To solve this, we develop a heirarchical Bayesian framework for multi-task response surface modeling using GPs and derive an expectation maximization (EM) algorithm. Our method can explicitly encode 
+          input uncertainty rather than fitting it to data, making it more practical for real systems.
   
     <div>
     <img class="img-fluid z-depth-0 rounded" src="/assets/img/gp3.jpg" width="1000" height="1000" alt="GP3 Photo">
     </div>
 
-    <p><b>Manufacturing application:</b> Coming soon </p>
+    <p><b>Manufacturing application:</b> In surface metrology, it is not uncommon to use gauges having multiple resolutions for measurement. For instance, a coordinate measurement machine can be used along with a 
+          profilometer or a laser holographic interferometer. Each gauge has a different repeatability which is known from prior experiments. Using our multi-task multi-resolution framework, we can encode the gauge 
+          uncertainties explicitly while making surface predictions, thus obtaining highly accurate surface reconstruction from limited measurements on engine surfaces.</p>
     
   </article>
 
