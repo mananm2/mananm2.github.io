@@ -1,51 +1,34 @@
-// Has to be in the head tag, otherwise a flicker effect will occur.
+// Modern theme handling script
 
-let toggleTheme = (theme) => {
-  if (theme == "dark") {
-    setTheme("light");
+// Function to get the user's theme preference
+function getThemePreference() {
+  return localStorage.getItem('theme') || 'light';
+}
+
+// Function to set theme
+function setTheme(theme) {
+  if (theme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
   } else {
-    setTheme("dark");
+    document.documentElement.setAttribute('data-theme', 'light');
   }
+  localStorage.setItem('theme', theme);
 }
 
+// Function to toggle theme
+function toggleTheme(currentTheme) {
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  setTheme(newTheme);
+}
 
-let setTheme = (theme) =>  {
-  transTheme();
-  if (theme) {
-    document.documentElement.setAttribute("data-theme", theme);
-  }
-  else {
-    document.documentElement.removeAttribute("data-theme");
-  }
-  localStorage.setItem("theme", theme);
+// Initialize theme on page load
+document.addEventListener('DOMContentLoaded', function() {
+  // Set initial theme based on user preference
+  const savedTheme = getThemePreference();
+  setTheme(savedTheme);
   
-  // Updates the background of medium-zoom overlay.
-  if (typeof medium_zoom !== 'undefined') {
-    medium_zoom.update({
-      background: getComputedStyle(document.documentElement)
-          .getPropertyValue('--global-bg-color') + 'ee',  // + 'ee' for trasparency.
-    })
-  }
-};
-
-
-let transTheme = () => {
-  document.documentElement.classList.add("transition");
-  window.setTimeout(() => {
-    document.documentElement.classList.remove("transition");
-  }, 500)
-}
-
-
-let initTheme = (theme) => {
-  if (theme == null) {
-    const userPref = window.matchMedia;
-    if (userPref && userPref('(prefers-color-scheme: dark)').matches) {
-        theme = 'dark';
-    }
-  }
-  setTheme(theme);
-}
-
-
-initTheme(localStorage.getItem("theme"));
+  // Add animation class to body after a short delay
+  setTimeout(() => {
+    document.body.classList.add('fade-in');
+  }, 100);
+});
