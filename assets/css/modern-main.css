@@ -326,24 +326,26 @@ code {
 }
 
 .project-card img, .publication-card img {
-  width: 100%;
+  width: 75%;
   border-radius: var(--global-radius-sm);
   margin-bottom: var(--global-spacing-md);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .project-title, .publication-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: var(--global-spacing-sm);
-}
-
-/****************************************************************************** 
+}*********************************************************************** 
  * Footer 
  ******************************************************************************/
 footer {
   background-color: var(--global-footer-bg-color);
   color: var(--global-footer-text-color);
-  padding: var(--global-spacing-lg) 0;
+  padding: var(--global-spacing-sm) 0;
+  font-size: 0.85rem;
 }
 
 footer a {
@@ -356,9 +358,9 @@ footer a:hover {
 }
 
 .sticky-bottom {
-  position: absolute;
-  bottom: 0;
+  position: static;
   width: 100%;
+  margin-top: var(--global-spacing-lg);
 }
 
 /****************************************************************************** 
@@ -431,4 +433,27 @@ footer a:hover {
     max-width: 100%;
     width: 100%;
   }
+}
+
+/* Project page specific text size adjustments */
+.container .post article p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Make project headings slightly smaller */
+.container .post h2 {
+  font-size: 1.75rem;
+}
+
+/* Reduce spacing between project sections */
+.container .mt-5 {
+  margin-top: 2rem !important;
+}
+
+/* Make project images more compact */
+.row .img-fluid {
+  max-height: 300px;
+  width: auto;
+  margin: 0 auto;
 }
